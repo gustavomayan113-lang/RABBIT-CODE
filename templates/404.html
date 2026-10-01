@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0B0F">
+<title>404 — Rabbit Code</title>
+<meta name="description" content="Página não encontrada.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../statics/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/01-tokens.css">
+<link rel="stylesheet" href="../assets/css/02-base.css">
+<link rel="stylesheet" href="../assets/css/03-components.css">
+<link rel="stylesheet" href="../assets/css/04-sections.css">
+<link rel="stylesheet" href="../assets/css/05-responsive.css">
+</head>
+
+<body>
+
+<div class="bg-fx bg-fx__grid" aria-hidden="true"></div>
+<div class="bg-fx bg-fx__glow" aria-hidden="true"></div>
+<div class="bg-fx bg-fx__noise" aria-hidden="true"></div>
+
+<main class="page">
+  <div class="container e404">
+    <span class="eyebrow">erro 404</span>
+    <div class="e404__code">404</div>
+    <h1 class="title-lg">Essa página não<br><span class="text-accent">existe (ainda)</span></h1>
+    <p class="e404__msg">// o link pode ter sido movido ou digitado errado</p>
+    <div class="hero__actions" style="justify-content:center">
+      <a class="btn btn--primary btn--lg" href="../index.html">Voltar ao portfólio</a>
+      <a class="btn btn--ghost btn--lg" href="../index.html#contato">Falar comigo</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__word" aria-hidden="true">Rabbit Code</div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Rabbit Code</span>
+      <a href="../index.html">← portfólio</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll("[data-year]").forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+</script>
+</body>
+</html>

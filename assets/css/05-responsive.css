@@ -1,0 +1,265 @@
+/* ============================================================
+   RABBIT CODE — 05. RESPONSIVO
+   Mobile-first overrides · do maior para o menor
+   ============================================================ */
+
+/* ============ <= 1080px (tablet landscape) ============ */
+@media (max-width: 1080px) {
+  .hero__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-3);
+    align-items: start;
+  }
+
+  .terminal { transform: none; }
+  .terminal:hover { transform: translateY(-4px); }
+
+  .project--feature { grid-column: span 2; }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .footer__brand { grid-column: 1 / -1; }
+
+  .p-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-3);
+  }
+
+  .p-block { grid-template-columns: minmax(0, 1fr); gap: var(--sp-1); }
+}
+
+/* ============ <= 900px ============ */
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: grid; }
+
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-3);
+  }
+
+  /* Bento vira 2 colunas */
+  .bento .card:nth-child(n) { grid-column: span 3; }
+  .bento .card:nth-child(1),
+  .bento .card:nth-child(2) { grid-column: span 3; }
+
+  /* Destaque vira um card normal em telas estreitas */
+  .project--feature {
+    grid-column: span 1;
+  }
+
+  .project--feature .project__thumb {
+    aspect-ratio: 16 / 10;
+  }
+
+  .project--feature .project__body {
+    padding: clamp(1rem, 2.3vw, 1.4rem);
+  }
+
+  .project--feature .project__desc {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    font-size: var(--fs-small);
+  }
+
+  .section-head__row { align-items: flex-start; }
+}
+
+/* ============ <= 720px (tablet portrait / celular grande) ============ */
+@media (max-width: 720px) {
+  :root {
+    --gutter: clamp(1rem, 4.6vw, 1.6rem);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--nav-h) + var(--sp-4));
+    padding-bottom: var(--sp-4);
+  }
+
+  .hero__glow { width: 130vw; top: -6%; right: -40%; }
+  .hero__glow--y { width: 110vw; left: -45%; bottom: -10%; }
+
+  .hero__title { line-height: 0.9; letter-spacing: -0.035em; }
+  .hero__line--out { padding-inline: clamp(0.2rem, 2vw, 0.6rem); }
+
+  .hero__top { gap: 0.7rem; }
+  .hero__availability { font-size: 0.62rem; padding: 0.34rem 0.7rem; }
+
+  /* Botões ocupam 100% da linha no celular */
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+
+  .terminal__body { min-height: auto; }
+
+  .btn {
+    padding: 0.85rem 1.15rem;
+  }
+
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .filters::-webkit-scrollbar { display: none; }
+  .filter { flex: 0 0 auto; scroll-snap-align: start; }
+
+  .projects {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-2);
+  }
+
+  .bento { grid-template-columns: minmax(0, 1fr); }
+  .bento .card:nth-child(n) { grid-column: span 1; }
+
+  .svc { min-height: auto; }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about__card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .section-head__row { flex-direction: column; align-items: stretch; }
+
+  .cta { padding: clamp(1.4rem, 7vw, 2.2rem); }
+  .cta__mail { font-size: 0.86rem; }
+
+  .cta__actions { flex-direction: column; }
+  .cta__actions .btn { width: 100%; }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-2);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .float-cta {
+    left: 50%;
+    transform: translate(-50%, 14px);
+    bottom: 76px;
+  }
+
+  .float-cta.is-show { transform: translate(-50%, 0); }
+
+  .to-top {
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 14px) scale(0.9);
+  }
+
+  .to-top.is-show { transform: translate(-50%, 0); }
+
+  .p-next { flex-direction: column; align-items: flex-start; }
+  .p-next .btn { width: 100%; }
+
+  /* Alvos de toque confortáveis (mínimo ~40px de altura) */
+  .footer__col a,
+  .footer__bottom a {
+    display: inline-block;
+    padding-block: 0.32rem;
+  }
+
+  .footer__col li + li a { margin-top: 0.1rem; }
+
+  .hero__scroll { padding-block: 0.5rem; }
+
+  .cta__mail a.link-anim { padding-block: 0.55rem; }
+
+  .p-back { padding-block: 0.55rem; }
+  .p-back { margin-left: -0.55rem; }
+
+  .project__link {
+    padding: 0.55rem 0;
+  }
+
+  .scope__link { padding: 0.6rem 0 0.15rem; }
+
+  .scope__sector { font-size: 0.62rem; letter-spacing: 0.12em; }
+
+  .project__foot { padding-top: var(--sp-1); }
+
+  .social { padding-block: 0.95rem; }
+
+  .tag { padding-block: 0.42rem; }
+
+  .menu__foot a { padding-block: 0.3rem; }
+}
+
+/* ============ <= 480px (celular) ============ */
+@media (max-width: 480px) {
+  .hero__title { font-size: clamp(2.6rem, 13.4vw, 3.8rem); }
+
+  .hero__line > span { transform: translateY(102%); }
+
+  .stats { grid-template-columns: minmax(0, 1fr); }
+
+  .scopes { grid-template-columns: minmax(0, 1fr); }
+
+  .socials { grid-template-columns: minmax(0, 1fr); }
+
+  .about__signature { flex-wrap: wrap; }
+
+  .project__body { padding: 1.05rem; }
+
+  .marquee__item { font-size: 1rem; }
+
+  .tag { padding: 0.3rem 0.6rem; }
+}
+
+/* ============ <= 380px (celular pequeno) ============ */
+@media (max-width: 380px) {
+  :root { --gutter: 0.9rem; }
+  .brand { font-size: 0.88rem; }
+  .brand__mark { width: 32px; }
+  .hero__title { font-size: 2.35rem; }
+}
+
+/* ============ Paisagem baixa (celular deitado) ============ */
+@media (max-height: 560px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: calc(var(--nav-h) + var(--sp-3)); }
+  .terminal__body { min-height: auto; }
+  .menu { align-content: center; }
+  .menu__link { font-size: clamp(1.3rem, 5.5vh, 2rem); }
+}
+
+/* ============ Cursor customizado só no desktop ============ */
+@media (hover: none), (pointer: coarse) {
+  .cursor,
+  .cursor__label { display: none !important; }
+
+  .spotlight { display: none; }
+
+  /* Garante alvos de toque confortáveis */
+  .filter,
+  .copy-btn,
+  .faq__q { padding-block: 0.85rem; }
+}
+
+/* ============ Telas médias com hover ( laptop ) ============ */
+@media (min-width: 901px) and (hover: hover) and (pointer: fine) {
+  .project__veil { opacity: 0; }
+}
+
+/* ============ Impressão ============ */
+@media print {
+  .bg-fx, .nav, .menu, .preloader, .cursor, .spotlight,
+  .to-top, .float-cta, .progress, .marquee { display: none !important; }
+  body { background: #fff; color: #000; }
+}

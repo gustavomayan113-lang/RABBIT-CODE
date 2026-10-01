@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0B0F">
+
+<title>Projeto — Rabbit Code</title>
+<meta name="description" content="Detalhes do projeto desenvolvido pela Rabbit Code.">
+<link rel="icon" href="../statics/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../statics/manifest.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/01-tokens.css">
+<link rel="stylesheet" href="../assets/css/02-base.css">
+<link rel="stylesheet" href="../assets/css/03-components.css">
+<link rel="stylesheet" href="../assets/css/04-sections.css">
+<link rel="stylesheet" href="../assets/css/05-responsive.css">
+</head>
+
+<body>
+
+<div class="bg-fx bg-fx__grid" aria-hidden="true"></div>
+<div class="bg-fx bg-fx__glow" aria-hidden="true"></div>
+<div class="bg-fx bg-fx__noise" aria-hidden="true"></div>
+
+<header class="nav is-stuck">
+  <div class="container nav__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__txt"><span>Rabbit</span> <span>Code</span></span>
+    </a>
+    <a class="btn btn--ghost btn--sm" href="../index.html#projetos">← Voltar ao portfólio</a>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="section p-hero">
+    <div class="container">
+      <a class="p-back" href="../index.html#projetos">
+        <span aria-hidden="true">←</span> todos os projetos
+      </a>
+
+      <div class="p-hero__grid">
+        <div>
+          <span class="eyebrow" id="p-cat">projeto</span>
+          <h1 class="title-xl" id="p-title" style="margin-top:.6rem">Carregando…</h1>
+          <p class="lead" id="p-desc" style="margin-top:var(--sp-2)"></p>
+          <div style="margin-top:var(--sp-2);display:flex;flex-wrap:wrap;gap:.5rem" id="p-tags"></div>
+          <div class="hero__actions" style="margin-top:var(--sp-3)">
+            <a class="btn btn--primary btn--lg" id="p-link" href="#" target="_blank" rel="noopener noreferrer">
+              Visitar site ao vivo <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="../index.html#contato">Quero um site assim</a>
+          </div>
+        </div>
+
+        <dl class="p-specs" id="p-specs"></dl>
+      </div>
+
+      <div class="p-hero__shot" id="p-shot"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="p-blocks">
+        <article class="p-block" data-reveal>
+          <h3>O desafio</h3>
+          <p id="p-challenge">Descreva o contexto do projeto. Você pode escrever direto aqui no template ou, melhor, cadastrar o texto no campo <code class="mono" style="color:var(--yellow)">challenge</code> em <code class="mono" style="color:var(--yellow)">06-data.js</code>.</p>
+        </article>
+
+        <article class="p-block" data-reveal>
+          <h3>Como foi feito</h3>
+          <p id="p-solution">Descreva o escopo entregue: layout, páginas, funcionalidades, otimizações e o motivo de cada decisão técnica.</p>
+        </article>
+
+        <article class="p-block" data-reveal>
+          <h3>O que tem no site</h3>
+          <ul class="scope__list" id="p-features"></ul>
+        </article>
+
+        <article class="p-block" data-reveal>
+          <h3>Resultado</h3>
+          <p id="p-result">Registre o impacto real do projeto: o que passou a ser mais rápido, mais fácil de usar ou mais fácil de vender.</p>
+        </article>
+      </div>
+
+      <div class="p-next" style="margin-top:var(--sp-5)">
+        <div>
+          <span class="eyebrow">Próximo passo</span>
+          <h3 class="title-md" style="margin-top:.4rem">Quer um site com esse padrão?</h3>
+        </div>
+        <a class="btn btn--primary btn--lg" href="../index.html#contato">Falar com a Rabbit Code <span class="btn__arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__word" aria-hidden="true">Rabbit Code</div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Rabbit Code</span>
+      <a href="../index.html">← voltar ao portfólio</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../assets/js/06-data.js"></script>
+<!-- Renderiza o projeto a partir da query string: projeto.html?id=0 -->
+<script src="../assets/js/08-projeto.js"></script>
+</body>
+</html>
