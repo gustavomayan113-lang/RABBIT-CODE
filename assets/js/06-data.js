@@ -12,9 +12,10 @@
    ------
    title      (obrigatório) Nome do site/projeto.
    url        (obrigatório) Link completo, com https://
-   category   Categoria usada nos filtros. Existem duas:
-              "landing" (site de página única) · "loja" (site com catálogo)
-              Se criar uma categoria nova, adicione o botão em CATEGORIES.
+category   Categoria usada nos filtros. Existem três:
+               "landing" (site de página única) · "loja" (site com catálogo)
+               "institucional" (site com várias páginas)
+               Se criar uma categoria nova, adicione o botão em CATEGORIES.
    year       Ano de entrega, ex: "2026"
    tagline    Frase curta que aparece no card.
    desc       Descrição de 1-3 linhas (aparece no card).
@@ -23,9 +24,9 @@
    feature    true = card grande (use em no máximo 1 projeto)
    sector     Área do negócio, usado na seção de escopo.
    features   Array com 3-4 funcionalidades realmente implementadas no site.
-   cover      (opcional) Caminho de imagem de capa, ex: "assets/img/covers/site.jpg".
-              As 4 capas já vêm prontas em assets/img/covers/.
-              Sem esse campo, o site gera uma arte colorida automaticamente.
+cover      (opcional) Caminho de imagem de capa, ex: "assets/img/covers/site.jpg".
+               As 5 capas já vêm prontas em assets/img/covers/.
+               Sem esse campo, o site gera uma arte colorida automaticamente.
 
    DICA: para testar o resultado rápido, troque a url por "#".
    ========================================================================== */
@@ -50,6 +51,25 @@ const PROJECTS = [
       "Cardápio de serviços com preços e duração",
       "Galeria de cortes com filtro por estilo",
       "Formulário com validação e resumo do pedido"
+    ]
+  },
+  {
+    title: "Lumina Odontologia",
+    url: "https://clinica-dente.vercel.app/",
+    category: "institucional",
+    year: "2026",
+    tagline: "Clínica odontológica · Alphaville/SP",
+    desc:
+      "Site institucional de clínica odontológica feito em Django, com página própria para cada tratamento, equipe, depoimentos e formulário validado no servidor. Animações de rolagem com GSAP e SEO local com dados estruturados.",
+    tags: ["Django", "Python", "GSAP"],
+    accent: "blue",
+    cover: "assets/img/covers/clinica.jpg",
+    sector: "Saúde",
+    features: [
+      "Site institucional multipágina: início, tratamentos, equipe e contato",
+      "Página de cada um dos 8 tratamentos com preço, duração e o que esperar",
+      "Formulário de contato validado no servidor, com resposta em JSON",
+      "SEO local com JSON-LD Dentist, Open Graph e páginas 404/500 próprias"
     ]
   },
   {
@@ -117,12 +137,14 @@ const PROJECTS = [
 const CATEGORIES = [
   { id: "all", label: "Todos" },
   { id: "landing", label: "Landing Pages" },
+  { id: "institucional", label: "Institucionais" },
   { id: "loja", label: "Lojas" }
 ];
 
 /* ------------------------------------------------------------------ MARQUEE */
 const MARQUEE_TOP = [
   "Sites de página única",
+  "Sites institucionais",
   "Lojas online",
   "Agendamento online",
   "Catálogo com filtros",
@@ -140,7 +162,7 @@ const PROFILE = {
   city: "Remoto · Brasil",
   hours: "Seg a Sex · 9h às 19h",
   stats: [
-    { value: 4, suffix: "", label: "Sites publicados" },
+    { value: 5, suffix: "", label: "Sites publicados" },
     { value: 100, suffix: "%", label: "Responsivos" },
     { value: 100, suffix: "%", label: "Código próprio" },
     { value: 24, suffix: "h", label: "Prazo de entrega" }
@@ -171,6 +193,18 @@ const SCOPES = [
       "Cardápio de serviços com preços e duração",
       "Galeria de cortes com filtro por estilo",
       "Formulário com validação e resumo do pedido"
+    ]
+  },
+  {
+    title: "Lumina Odontologia",
+    sector: "Saúde",
+    category: "institucional",
+    url: "https://clinica-dente.vercel.app/",
+    features: [
+      "Home, tratamentos, equipe e contato em Django",
+      "Página de detalhe dos 8 tratamentos",
+      "Formulário validado no servidor com resposta em JSON",
+      "SEO local com JSON-LD Dentist e OG"
     ]
   },
   {
@@ -219,11 +253,11 @@ const FAQS = [
   },
   {
     q: "O site fica pronto para celular?",
-    a: "Sim. Todo projeto é desenhado mobile-first e testado em telas de celular, tablet e desktop. Os quatro sites deste portfólio foram construídos assim, desde o primeiro pixel."
+    a: "Sim. Todo projeto é desenhado mobile-first e testado em telas de celular, tablet e desktop. Os cinco sites deste portfólio foram construídos assim, desde o primeiro pixel."
   },
   {
     q: "Quais tecnologias você usa?",
-    a: "HTML, CSS e JavaScript na maioria dos projetos — é o que garante site rápido e fácil de manter. Para projetos maiores, uso React no front-end. Nada de framework pesado sem necessidade."
+    a: "HTML, CSS e JavaScript na maioria dos projetos — é o que garante site rápido e fácil de manter. Para projetos maiores uso React no front-end e Django com Python quando o site precisa de painel, páginas internas ou formulário processado no servidor. Nada de framework pesado sem necessidade."
   },
   {
     q: "Você faz manutenção depois da entrega?",

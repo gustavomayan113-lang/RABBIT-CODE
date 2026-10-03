@@ -38,12 +38,12 @@ copie um bloco, cole no fim do array e preencha:
 {
   title: "Nome do Meu Site",
   url: "https://www.meusite.com.br",   // ← o link que abre ao clicar
-  category: "landing",                  // landing (página única) | loja (com catálogo)
+  category: "landing",                  // landing | institucional | loja
   year: "2026",
   tagline: "Frase curta que aparece no card.",
   desc: "Descrição de 1 a 3 linhas do que foi feito no projeto.",
   tags: ["HTML", "CSS", "JavaScript"],
-  accent: "yellow",                     // yellow | purple | pink | blue | green
+  accent: "yellow",                     // yellow | purple | pink | blue | green | orange
   feature: false                        // true = card grande (no máximo 1 projeto)
 }
 ```
@@ -61,12 +61,13 @@ O site se atualiza sozinho: cards, filtros, numeração e animações são gerad
 | `features` | Array de 3-4 funcionalidades realmente implementadas. Aparece na seção "Escopo". |
 | `sector` | Área do negócio, ex: `"Gastronomia"`. Aparece na seção "Escopo". |
 | `challenge` / `solution` / `result` | Textos da página de detalhes do projeto. |
-| `cover` | Caminho de imagem de capa, ex: `"assets/img/barbearia.jpg"`. Sem esse campo o site cria uma arte colorida automaticamente. |
+| `cover` | Caminho de imagem de capa, ex: `"assets/img/covers/site.jpg"`. Sem esse campo o site cria uma arte colorida automaticamente. |
 | `feature` | `true` gera um card largo em destaque. |
 
 ### Categorias
 
-Existem duas: `landing` (site de página única, foco em conversão) e `loja` (site com catálogo e filtros).
+Existem três: `landing` (site de página única, foco em conversão), `institucional` (site com várias páginas)
+e `loja` (site com catálogo e filtros).
 
 **O filtro só aparece se algum projeto usar aquela categoria** — o site nunca mostra uma aba vazia.
 Se criar uma categoria nova, adicione o botão em `CATEGORIES`.
@@ -89,12 +90,18 @@ Se criar uma categoria nova, adicione o botão em `CATEGORIES`.
 | Projeto | Categoria | Setor | Capa |
 |---|---|---|---|
 | Corte Relâmpago | landing | Serviços locais | `assets/img/covers/barbearia.jpg` |
+| Lumina Odontologia | institucional | Saúde | `assets/img/covers/clinica.jpg` |
 | magusCar | loja | Automotivo | `assets/img/covers/maguscar.jpg` |
 | Bem Servido | landing | Gastronomia | `assets/img/covers/restaurante.jpg` |
 | Kasa Móveis | loja | Varejo | `assets/img/covers/moveis.jpg` |
 
 As capas são capturas reais de cada site em 1440×900, convertidas para JPEG (77 a 135 KB cada).
 Se um site mudar de visual, basta substituir o arquivo mantendo o nome.
+
+> A capa da clínica foi capturada com o Chrome em modo headless:
+> `chrome --headless=new --force-prefers-reduced-motion --window-size=1440,900 --screenshot=clinica.jpg <url>`
+> O `--force-prefers-reduced-motion` é necessário: sem ele o GSAP deixa os blocos com `opacity: 0`
+> e a captura sai praticamente em branco.
 
 ---
 

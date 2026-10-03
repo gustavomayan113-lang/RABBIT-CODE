@@ -440,6 +440,12 @@
     initMarquee();
   }
 
+  var SCOPE_CAT_LABEL = {
+    loja: "Loja",
+    landing: "Landing page",
+    institucional: "Site institucional"
+  };
+
   function initScopes() {
     var el = $("#scopes");
     if (!el || typeof SCOPES === "undefined") return;
@@ -449,7 +455,7 @@
         '<article class="card card--grad scope" data-reveal data-reveal-index="' + i + '">' +
           '<div class="scope__head">' +
             '<span class="scope__sector">' + esc(s.sector) + "</span>" +
-            '<span class="scope__cat">' + esc(s.category === "loja" ? "Loja" : "Landing page") + "</span>" +
+            '<span class="scope__cat">' + esc(SCOPE_CAT_LABEL[s.category] || "Landing page") + "</span>" +
           "</div>" +
           "<h3>" + esc(s.title) + "</h3>" +
           '<ul class="scope__list">' +
