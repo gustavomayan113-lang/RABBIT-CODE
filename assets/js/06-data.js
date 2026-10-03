@@ -128,6 +128,25 @@ const PROJECTS = [
       "Orçamento montado e enviado ao WhatsApp",
       "SPA com navegação sem recarregar a página"
     ]
+  },
+  {
+    title: "Loja Cell",
+    url: "https://loja-smartphone.vercel.app/",
+    category: "loja",
+    year: "2026",
+    tagline: "Loja de smartphones · Salvador/BA",
+    desc:
+      "E-commerce de smartphones com catálogo completo, filtros por marca e faixa de preço, página de produto com especificações técnicas, carrinho de compras e checkout integrado. Design mobile-first otimizado para conversão.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    accent: "purple",
+    cover: "assets/img/lojacell-capa.png",
+    sector: "Varejo",
+    features: [
+      "Catálogo de smartphones com filtros por marca e preço",
+      "Página de produto com especificações e galeria",
+      "Carrinho persistente e checkout simplificado",
+      "Integração com WhatsApp para orçamento e suporte"
+    ]
   }
 ];
 
@@ -162,7 +181,7 @@ const PROFILE = {
   city: "Remoto · Brasil",
   hours: "Seg a Sex · 9h às 19h",
   stats: [
-    { value: 5, suffix: "", label: "Sites publicados" },
+    { value: 6, suffix: "", label: "Sites publicados" },
     { value: 100, suffix: "%", label: "Responsivos" },
     { value: 100, suffix: "%", label: "Código próprio" },
     { value: 24, suffix: "h", label: "Prazo de entrega" }
@@ -241,6 +260,18 @@ const SCOPES = [
       "Página de produto com variações",
       "Orçamento enviado direto ao WhatsApp",
       "SPA sem recarregar a página"
+    ]
+  },
+  {
+    title: "Loja Cell",
+    sector: "Varejo",
+    category: "loja",
+    url: "https://loja-smartphone.vercel.app/",
+    features: [
+      "Catálogo de smartphones com filtros por marca e preço",
+      "Página de produto com especificações e galeria",
+      "Carrinho persistente e checkout simplificado",
+      "Integração com WhatsApp para orçamento e suporte"
     ]
   }
 ];
