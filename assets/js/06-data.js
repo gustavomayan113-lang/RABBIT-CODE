@@ -44,7 +44,7 @@ const PROJECTS = [
     tags: ["HTML", "CSS", "JavaScript"],
     accent: "yellow",
     feature: true,
-    cover: "assets/img/covers/barbearia.jpg",
+    cover: "assets/img/corterelampago.png",
     sector: "Serviços locais",
     features: [
       "Agenda online com escolha de profissional e horário",
