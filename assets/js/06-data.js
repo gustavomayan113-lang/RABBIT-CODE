@@ -130,6 +130,25 @@ const PROJECTS = [
     ]
   },
   {
+    title: "Mecânica Automotiva",
+    url: "https://mecanica-automotiva-port.vercel.app/",
+    category: "landing",
+    year: "2026",
+    tagline: "Oficina mecânica · Confiança e transparência",
+    desc:
+      "Landing page para oficina mecânica com apresentação dos serviços, diferenciais, formas de contato e botão direto para WhatsApp. Foco em transmitir credibilidade e facilitar o agendamento pelo celular.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    accent: "blue",
+    cover: "assets/img/mecanica-capa.png",
+    sector: "Automotivo",
+    features: [
+      "Apresentação dos serviços e diferenciais",
+      "Seção de contato com WhatsApp direto",
+      "Design responsivo e mobile-first",
+      "Call-to-action otimizado para agendamento"
+    ]
+  },
+  {
     title: "Loja Cell",
     url: "https://loja-smartphone.vercel.app/",
     category: "loja",
@@ -181,7 +200,7 @@ const PROFILE = {
   city: "Remoto · Brasil",
   hours: "Seg a Sex · 9h às 19h",
   stats: [
-    { value: 6, suffix: "", label: "Sites publicados" },
+    { value: 7, suffix: "", label: "Sites publicados" },
     { value: 100, suffix: "%", label: "Responsivos" },
     { value: 100, suffix: "%", label: "Código próprio" },
     { value: 24, suffix: "h", label: "Prazo de entrega" }
@@ -260,6 +279,18 @@ const SCOPES = [
       "Página de produto com variações",
       "Orçamento enviado direto ao WhatsApp",
       "SPA sem recarregar a página"
+    ]
+  },
+  {
+    title: "Mecânica Automotiva",
+    sector: "Automotivo",
+    category: "landing",
+    url: "https://mecanica-automotiva-port.vercel.app/",
+    features: [
+      "Apresentação dos serviços e diferenciais",
+      "Contato com WhatsApp direto",
+      "Design responsivo e mobile-first",
+      "Call-to-action para agendamento"
     ]
   },
   {
